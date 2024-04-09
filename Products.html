@@ -3,7 +3,7 @@
 <html class="wide wow-animation" lang="en">
 
 <head>
-    <title>Home</title>
+    <title>Products</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport"
         content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -18,6 +18,49 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <style>
+        /* Center the splash screen */
+        .splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            /* Change this to your preferred background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            /* Ensure the splash screen is on top of everything */
+        }
+
+        /* Style the image inside the splash screen */
+        .splash-screen img {
+            max-width: 300px;
+            max-height: 300px;
+            animation: splashAnimation 3s ease-out;
+            /* Apply animation */
+            transform-origin: center;
+        }
+
+        /* Keyframes for the animation */
+        @keyframes splashAnimation {
+            0% {
+                transform: scale(0.1);
+                /* Start from small size */
+            }
+
+            100% {
+                transform: scale(1);
+                /* End at full size */
+            }
+        }
+
+        /* Hide the main content initially */
+        #main-content {
+            display: none;
+        }
+
         .ie-panel {
             display: none;
             background: #212121;
@@ -75,27 +118,14 @@
                                         </li>
                                         <li class="rd-nav-item"><a class="rd-nav-link" href="about.html">About</a>
                                         </li>
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="Projects.html">Projects</a>
+                                        </li>
                                         <li class="rd-nav-item active"><a class="rd-nav-link"
-                                                href="Projects.html">Projects</a>
+                                                href="Products.html">Products</a>
                                         </li>
                                         <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
                                         </li>
                                     </ul>
-                                </div>
-                                <!-- RD Navbar Search-->
-                                <div class="rd-navbar-search">
-                                    <button class="rd-navbar-search-toggle rd-navbar-fixed-element-1"
-                                        data-rd-navbar-toggle=".rd-navbar-search"><span></span></button>
-                                    <form class="rd-search" action="#" method="GET">
-                                        <div class="form-wrap">
-                                            <label class="form-label" for="rd-navbar-search-form-input">Search</label>
-                                            <input class="rd-navbar-search-form-input form-input"
-                                                id="rd-navbar-search-form-input" type="text" name="s"
-                                                autocomplete="off">
-                                            <div class="rd-search-results-live" id="rd-search-results-live"></div>
-                                        </div>
-                                        <button class="rd-search-form-submit mdi mdi-magnify" type="submit"></button>
-                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -112,8 +142,8 @@
                             <div class="container">
                                 <div class="row justify-content-lg-left">
                                     <div class="col-md-12 col-xl-10">
-                                        <h1 data-caption-animate="fadeInUp" data-caption-delay="100">Know more about the
-                                            Projects we have executed so far
+                                        <h1 data-caption-animate="fadeInUp" data-caption-delay="100">Please have a look
+                                            at our products
                                         </h1>
                                         <a class="button button-lg button-primary" href="#projects-executed-section"
                                             data-caption-animate="fadeInUp" data-caption-delay="450">Learn More</a>
@@ -123,618 +153,297 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-meta">
-                    <ul class="links">
-                        <li><a class="icon icon-meta mdi mdi-facebook" href="#"></a></li>
-                        <li><a class="icon icon-meta mdi mdi-twitter" href="#"></a></li>
-                        <li><a class="icon icon-meta mdi mdi-instagram" href="#"></a></li>
-                        <li><a class="icon icon-meta mdi mdi-facebook-messenger" href="#"></a></li>
-                        <li><a class="icon icon-meta mdi mdi-linkedin" href="#"></a></li>
-                        <li><a class="icon icon-meta mdi mdi-snapchat" href="#"></a></li>
-                    </ul>
-                </div>
             </section>
             <!--	Schedule of Radio Shows-->
             <section class="section section-lg bg-gray-100" id="projects-executed-section">
                 <div class="container text-center">
-                    <h2>Projects Executed</h2>
-                    <p>This list outlines various electrical engineering projects and installations undertaken by
-                        different companies across multiple locations,<br class="d-none d-lg-block"> covering a wide
-                        range of services including transformer substations, panel installations, cabling, fabrication,
-                        and liaisoning work for various industries and institutions.</p>
+                    <h2>Our Products</h2>
                     <div class="row row-30 row-offset-4 text-left">
                         <!-- section 1 -->
-                        <div class="col-md-6 col-lg-4 wow fadeInRight">
-                            <article class="post-boxed">
+                        <div class="col-md-6 col-lg-4 wow fadeInRight" data-wow-delay="0.2s">
+                            <article class=" product-post-boxed">
                                 <div class="post-meta">
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-author"><span>by</span> <a href="#">Leona Burns</a>
-                                        </div>
-                                    </div> -->
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-date">07:00am – 10:00am</div>
-                                    </div> -->
-                                </div><a class="media-wrapper" href="#"><img src="images/latest-blog-post-1-370x272.jpg"
-                                        alt="" width="370" height="272" /></a>
-                                <div class="post-body">
-                                    <!-- <ul class="list-tags">
-                    <li><a class="tag-1" href="#">Program</a>
-                    </li>
-                  </ul> -->
+                                </div><a class="media-wrapper" href="#"><img
+                                        src="images/Products/22 KV METERING KIOSK.png" alt="" width="370"
+                                        height="272" /></a>
+                                <div class="post-body" id="product-body">
+                                    <h6 class="post-title"><a href="#"> 22 KV METERING KIOSK
+                                        </a></h6>
                                 </div>
                             </article>
                         </div>
+                        <br />
                         <div class="col-md-6 col-lg-4 wow fadeInRight" data-wow-delay="0.1s">
-                            <article class="post-boxed">
+                            <article class=" product-post-boxed">
                                 <div class="post-meta">
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-author"><span>by</span> <a href="#">Martha Ryan</a>
-                                        </div>
-                                    </div>
-                                    <div class="post-meta-item">
-                                        <div class="post-date">10:00am – 12:00am</div>
-                                    </div> -->
-                                </div><a class="media-wrapper" href="#"><img src="images/latest-blog-post-2-370x272.jpg"
+                                </div><a class="media-wrapper" href="#"><img
+                                        src="images/Products/22 KV433 V, 1000KVA TR SUB-STATION22 KV HT LINE WORK.png"
                                         alt="" width="370" height="272" /></a>
-                                <div class="post-body">
-                                    <!-- <ul class="list-tags">
-                    <li><a class="tag-1" href="#">Interview</a>
-                    </li>
-                  </ul> -->
-                                    <h6 class="post-title"><a href="#">SIARA Engineering Pvt. Ltd. Chakan
+                                <div class="post-body" id="product-body">
+                                    <h6 class="post-title"><a href="#">22 KV/433 V, 1000KVA T/R SUB-STATION22 KV HT LINE
+                                            WORK
                                         </a>
                                     </h6>
-                                    <p class="post-exeption">a) 33KV/433V, 315KVA Transformer sub-station with allied
-                                        electrical
-                                        work<br />
-                                        b) Industrial cabling with Tray Work & Fabrication<br />
-                                        c) Supply of MCC & PCC Panels<br />
-                                        d) Internal Lighting & Cabling<br />
-                                        e) Earthing & M.S.E.D.C.L. & E.I. Office Liaisoning Work</p>
                                 </div>
                             </article>
                         </div>
                         <div class="col-md-6 col-lg-4 wow fadeInRight" data-wow-delay="0.2s">
-                            <article class="post-boxed">
+                            <article class=" product-post-boxed">
                                 <div class="post-meta">
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-author"><span>by</span> <a href="#">Martha Ryan</a>
-                                        </div>
-                                    </div>
-                                    <div class="post-meta-item">
-                                        <div class="post-date">12:00am – 03:00pm</div>
-                                    </div> -->
-                                </div><a class="media-wrapper" href="#"><img src="images/latest-blog-post-3-370x272.jpg"
-                                        alt="" width="370" height="272" /></a>
-                                <div class="post-body">
-                                    <!-- <ul class="list-tags">
-                                    <li><a class="tag-1" href="#">Live</a>
-                                    </li>
-                                </ul> -->
-                                    <h6 class="post-title"><a href="#"> JAY Engineering, Chakan.
+                                </div><a class="media-wrapper" href="#"><img
+                                        src="images/Products/33 KV METERING KIOSK WORK.png" alt="" width="370"
+                                        height="272" /></a>
+                                <div class="post-body" id="product-body">
+                                    <h6 class="post-title"><a href="#"> 33 KV METERING KIOSK WORK
                                         </a></h6>
-                                    <p class="post-exeption">a) Factory Electrification<br />
-                                        b) Supply & Installation of MCC & PCC Panels<br />
-                                        c) Lighting Cable Tray Work with Fabrication, Cable Laying & Termination
-                                    </p>
                                 </div>
                             </article>
                         </div>
                         <!-- section 2 -->
                         <div class="col-md-6 col-lg-4 wow fadeInRight">
-                            <article class="post-boxed">
+                            <article class=" product-post-boxed">
                                 <div class="post-meta">
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-author"><span>by</span> <a href="#">Leona Burns</a>
-                                        </div>
-                                    </div> -->
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-date">07:00am – 10:00am</div>
-                                    </div> -->
-                                </div><a class="media-wrapper" href="#"><img src="images/latest-blog-post-1-370x272.jpg"
-                                        alt="" width="370" height="272" /></a>
-                                <div class="post-body">
-                                    <!-- <ul class="list-tags">
-                    <li><a class="tag-1" href="#">Program</a>
-                    </li>
-                  </ul> -->
-                                    <h6 class="post-title"><a href="#">SAND TEKNIK, Bebad-Ohol.</a></h6>
-                                    <p class="post-exeption">a) 22KV/433V, 200 KVA, Pole Mounted Transformer Sub-Station
-                                        with allied electrical work<br />
-                                        b) Conversion of 1 Ph. 2 wire system in to 3 Ph. 4 Wire system.<br />
-                                        c) Internal Lighting & Cabling. with Cable Tray work, Fabrication<br />
-                                        d) Earthing & M.S.E.D.C.L. & E.I. Office Liaisoning Work</p>
+                                </div><a class="media-wrapper" href="#"><img
+                                        src="images/Products/BUS-BAR ARRANGEMENTCABLE CONNECTION.png" alt="" width="370"
+                                        height="272" /></a>
+                                <div class="post-body" id="product-body">
+                                    <h6 class="post-title"><a href="#">BUS-BAR ARRANGEMENTCABLE CONNECTION</a></h6>
                                 </div>
                             </article>
                         </div>
                         <div class="col-md-6 col-lg-4 wow fadeInRight" data-wow-delay="0.1s">
-                            <article class="post-boxed">
+                            <article class=" product-post-boxed">
                                 <div class="post-meta">
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-author"><span>by</span> <a href="#">Martha Ryan</a>
-                                        </div>
-                                    </div>
-                                    <div class="post-meta-item">
-                                        <div class="post-date">10:00am – 12:00am</div>
-                                    </div> -->
-                                </div><a class="media-wrapper" href="#"><img src="images/latest-blog-post-2-370x272.jpg"
-                                        alt="" width="370" height="272" /></a>
-                                <div class="post-body">
-                                    <!-- <ul class="list-tags">
-                    <li><a class="tag-1" href="#">Interview</a>
-                    </li>
-                  </ul> -->
-                                    <h6 class="post-title"><a href="#">MILLENNIUM METALLICS, Talawade.
+                                </div><a class="media-wrapper" href="#"><img src="images/Products/BUS-BAR.png" alt=""
+                                        width="370" height="272" /></a>
+                                <div class="post-body" id="product-body">
+                                    <h6 class="post-title"><a href="#">BUS-BAR
                                         </a>
                                     </h6>
-                                    <p class="post-exeption">a) 22 KV/433 V, 200 KVA, Transformer Sub-station with
-                                        allied electrical work<br />
-                                        b) Supply & Installation of MCC & PCC Panels<br />
-                                        c) Internal Lighting, Fabrication, Cable Tray work & Cabling<br />
-                                        d) Liaisoning work for M.S.E.D.C.L. & E.I. Office</p>
                                 </div>
                             </article>
                         </div>
                         <div class="col-md-6 col-lg-4 wow fadeInRight" data-wow-delay="0.2s">
-                            <article class="post-boxed">
+                            <article class=" product-post-boxed">
                                 <div class="post-meta">
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-author"><span>by</span> <a href="#">Martha Ryan</a>
-                                        </div>
-                                    </div>
-                                    <div class="post-meta-item">
-                                        <div class="post-date">12:00am – 03:00pm</div>
-                                    </div> -->
-                                </div><a class="media-wrapper" href="#"><img src="images/latest-blog-post-3-370x272.jpg"
+                                </div><a class="media-wrapper" href="#"><img src="images/Products/CONTROL WIRING.png"
                                         alt="" width="370" height="272" /></a>
-                                <div class="post-body">
-                                    <!-- <ul class="list-tags">
-                    <li><a class="tag-1" href="#">Live</a>
-                    </li>
-                  </ul> -->
-                                    <h6 class="post-title"><a href="#"> ASK ENGINEERING INDUSTRIES PVT LTD, Sutarwadi
-
-                                        </a></h6>
-                                    <p class="post-exeption">a) Supply & Installation of APFC Panel<br />
-                                        b) Electrical Annual Maintenance Contract.<br />
-                                        c) Electrical Consultancy.<br />
-                                        d) 22 KV / 433 V, 200 KVA Transformer Sub- Station Maintenance Work.<br />
-                                        e) Control Panel Renovation Work.
-                                    </p>
+                                <div class="post-body" id="product-body">
+                                    <h6 class="post-title"><a href="#">CONTROL WIRING</a></h6>
                                 </div>
                             </article>
                         </div>
                         <!-- section 3 -->
                         <div class="col-md-6 col-lg-4 wow fadeInRight">
-                            <article class="post-boxed">
+                            <article class=" product-post-boxed">
                                 <div class="post-meta">
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-author"><span>by</span> <a href="#">Leona Burns</a>
-                                        </div>
-                                    </div> -->
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-date">07:00am – 10:00am</div>
-                                    </div> -->
-                                </div><a class="media-wrapper" href="#"><img src="images/latest-blog-post-1-370x272.jpg"
-                                        alt="" width="370" height="272" /></a>
-                                <div class="post-body">
-                                    <!-- <ul class="list-tags">
-                    <li><a class="tag-1" href="#">Program</a>
-                    </li>
-                  </ul> -->
-                                    <h6 class="post-title"><a href="#">SAFE TREAT ENGINEERS & CONTRACTORS,-Thane.</a>
+                                </div><a class="media-wrapper" href="#"><img
+                                        src="images/Products/ENGINEERING SHOP WITH METAL HALIDE FITTING.png" alt=""
+                                        width="370" height="272" /></a>
+                                <div class="post-body" id="product-body">
+                                    <h6 class="post-title"><a href="#">ENGINEERING SHOP WITH METAL HALIDE FITTING</a>
                                     </h6>
-                                    <p class="post-exeption">a) Fabrication Tray Work, Cabling, Earthing, & Other Allied
-                                        electrical work<br />
-                                        for waste water treatment plant at site LAVASA Lake City.
-                                        b) Cabling Earthing, & Other Allied electrical work for water treatment plant at
-                                        site LAVASA Lake City
-                                    </p>
                                 </div>
                             </article>
                         </div>
                         <div class="col-md-6 col-lg-4 wow fadeInRight" data-wow-delay="0.1s">
-                            <article class="post-boxed">
+                            <article class=" product-post-boxed">
                                 <div class="post-meta">
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-author"><span>by</span> <a href="#">Martha Ryan</a>
-                                        </div>
-                                    </div>
-                                    <div class="post-meta-item">
-                                        <div class="post-date">10:00am – 12:00am</div>
-                                    </div> -->
-                                </div><a class="media-wrapper" href="#"><img src="images/latest-blog-post-2-370x272.jpg"
-                                        alt="" width="370" height="272" /></a>
-                                <div class="post-body">
-                                    <!-- <ul class="list-tags">
-                    <li><a class="tag-1" href="#">Interview</a>
-                    </li>
-                  </ul> -->
-                                    <h6 class="post-title"><a href="#">ABHIJEET Engineers, Somatane Phata.
+                                </div><a class="media-wrapper" href="#"><img
+                                        src="images/Products/FORGING SHOP- WITH STREET LIGHT FITTING.png" alt=""
+                                        width="370" height="272" /></a>
+                                <div class="post-body" id="product-body">
+                                    <h6 class="post-title"><a href="#">FORGING SHOP- WITH STREET LIGHT FITTING
                                         </a>
                                     </h6>
-                                    <p class="post-exeption">a) 22 KV/433 V, 200 KVA, Pole Mounted Transformer<br />
-                                        Sub-Station with allied electrical work
-                                        b) Conversion of 1 Ph., 2 wire system in to 3 Ph., 4 Wire system.<br />
-                                        c) Internal Lighting & Cabling. with Cable Tray work, Fabrication<br />
-                                        d) Earthing & M.S.E.D.C.L. & E.I. Office Liaisoning Work</p>
                                 </div>
                             </article>
                         </div>
                         <div class="col-md-6 col-lg-4 wow fadeInRight" data-wow-delay="0.2s">
-                            <article class="post-boxed">
+                            <article class=" product-post-boxed">
                                 <div class="post-meta">
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-author"><span>by</span> <a href="#">Martha Ryan</a>
-                                        </div>
-                                    </div>
-                                    <div class="post-meta-item">
-                                        <div class="post-date">12:00am – 03:00pm</div>
-                                    </div> -->
-                                </div><a class="media-wrapper" href="#"><img src="images/latest-blog-post-3-370x272.jpg"
-                                        alt="" width="370" height="272" /></a>
-                                <div class="post-body">
-                                    <!-- <ul class="list-tags">
-                    <li><a class="tag-1" href="#">Live</a>
-                    </li>
-                  </ul> -->
-                                    <h6 class="post-title"><a href="#"> VED – VIHAR, Chandani Chowk.
+                                </div><a class="media-wrapper" href="#"><img src="images/Products/htwork.png" alt=""
+                                        width="370" height="272" /></a>
+                                <div class="post-body" id="product-body">
+                                    <h6 class="post-title"><a href="#"> H. T. WORK
                                         </a></h6>
-                                    <p class="post-exeption">a) Concealed Wiring & All Accessories Fitting – 26 Two BHK
-                                        Flats<br />
-                                        b) Staircase & Parking – Wiring & Accessories Fitting
-                                    </p>
                                 </div>
                             </article>
                         </div>
                         <!-- section 4 -->
                         <div class="col-md-6 col-lg-4 wow fadeInRight">
-                            <article class="post-boxed">
+                            <article class=" product-post-boxed">
                                 <div class="post-meta">
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-author"><span>by</span> <a href="#">Leona Burns</a>
-                                        </div>
-                                    </div> -->
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-date">07:00am – 10:00am</div>
-                                    </div> -->
-                                </div><a class="media-wrapper" href="#"><img src="images/latest-blog-post-1-370x272.jpg"
-                                        alt="" width="370" height="272" /></a>
-                                <div class="post-body">
-                                    <!-- <ul class="list-tags">
-                    <li><a class="tag-1" href="#">Program</a>
-                    </li>
-                  </ul> -->
-                                    <h6 class="post-title"><a href="#"> MINDA SAI LTD. Chakan.</a></h6>
-                                    <p class="post-exeption">a) 22 KV/433 V, 200 KVA, Transformer Sub-station with
-                                        allied electrical work<br />
-                                        b) Supply & Installation of MCC & PCC Panels<br />
-                                        c) Internal Lighting, Tray & Raceway work & Cabling<br />
-                                        d) Liasioning work For M.S.E.D.C.L. & E.I. Office</p>
+                                </div><a class="media-wrapper" href="#"><img
+                                        src="images/Products/INDUSTRIAL CABLING & TRAY WORK.png" alt="" width="370"
+                                        height="272" /></a>
+                                <div class="post-body" id="product-body">
+                                    <h6 class="post-title"><a href="#">INDUSTRIAL CABLING & TRAY WORK</a></h6>
                                 </div>
                             </article>
                         </div>
                         <div class="col-md-6 col-lg-4 wow fadeInRight" data-wow-delay="0.1s">
-                            <article class="post-boxed">
+                            <article class=" product-post-boxed">
                                 <div class="post-meta">
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-author"><span>by</span> <a href="#">Martha Ryan</a>
-                                        </div>
-                                    </div>
-                                    <div class="post-meta-item">
-                                        <div class="post-date">10:00am – 12:00am</div>
-                                    </div> -->
-                                </div><a class="media-wrapper" href="#"><img src="images/latest-blog-post-2-370x272.jpg"
-                                        alt="" width="370" height="272" /></a>
-                                <div class="post-body">
-                                    <!-- <ul class="list-tags">
-                    <li><a class="tag-1" href="#">Interview</a>
-                    </li>
-                  </ul> -->
-                                    <h6 class="post-title"><a href="#">LAXMI HYDRAULICS PVT. LTD. Solapur.
+                                </div><a class="media-wrapper" href="#"><img
+                                        src="images/Products/INDUSTRIAL LIGHTING WORK.png" alt="" width="370"
+                                        height="272" /></a>
+                                <div class="post-body" id="product-body">
+                                    <h6 class="post-title"><a href="#">INDUSTRIAL LIGHTING WORK
                                         </a>
                                     </h6>
-                                    <p class="post-exeption">a) Panel Erection,<br />
-                                        b) Cable Lying & Termination,<br />
-                                        c) Tray Erection with Fabrication work<br />
-                                        d) Earthing & Allied Work<br />
-                                        e) Point Wiring with PVC Pipe & Casing-N-Capping<br />
-                                        f) High-Bay (Metal Halide) Fitting Installation & Wiring<br />
-                                        g) Street Lighting & All Allied Electrical Work</p>
                                 </div>
                             </article>
                         </div>
                         <div class="col-md-6 col-lg-4 wow fadeInRight" data-wow-delay="0.2s">
-                            <article class="post-boxed">
+                            <article class=" product-post-boxed">
                                 <div class="post-meta">
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-author"><span>by</span> <a href="#">Martha Ryan</a>
-                                        </div>
-                                    </div>
-                                    <div class="post-meta-item">
-                                        <div class="post-date">12:00am – 03:00pm</div>
-                                    </div> -->
-                                </div><a class="media-wrapper" href="#"><img src="images/latest-blog-post-3-370x272.jpg"
-                                        alt="" width="370" height="272" /></a>
-                                <div class="post-body">
-                                    <!-- <ul class="list-tags">
-                    <li><a class="tag-1" href="#">Live</a>
-                    </li>
-                  </ul> -->
-                                    <h6 class="post-title"><a href="#"> EATON FLUID & POWER -Pimpri
-
-                                        </a></h6>
-                                    <p class="post-exeption">a) Supply & Installation of MCC Panel<br />
-                                        b) Supply & Installation of Cable & Cable Tray<br />
-                                        c) Earthing & Allied Electrical work
-                                    </p>
+                                </div><a class="media-wrapper" href="#"><img src="images/Products/M.C.B. D.B.png" alt=""
+                                        width="370" height="272" /></a>
+                                <div class="post-body" id="product-body">
+                                    <h6 class="post-title"><a href="#">M.C.B. D.B</a></h6>
                                 </div>
                             </article>
                         </div>
                         <!-- section 5 -->
                         <div class="col-md-6 col-lg-4 wow fadeInRight">
-                            <article class="post-boxed">
+                            <article class=" product-post-boxed">
                                 <div class="post-meta">
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-author"><span>by</span> <a href="#">Leona Burns</a>
-                                        </div>
-                                    </div> -->
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-date">07:00am – 10:00am</div>
-                                    </div> -->
-                                </div><a class="media-wrapper" href="#"><img src="images/latest-blog-post-1-370x272.jpg"
-                                        alt="" width="370" height="272" /></a>
-                                <div class="post-body">
-                                    <!-- <ul class="list-tags">
-                    <li><a class="tag-1" href="#">Program</a>
-                    </li>
-                  </ul> -->
-                                    <h6 class="post-title"><a href="#">TATA TOYO RADIATORS – Hinjawadi.</a></h6>
-                                    <p class="post-exeption">a) Supply & Installation of 22 KV HT Switch Gears<br />
-                                        b) Supply & Lying of HT Cable with Its Termination</p>
+                                </div><a class="media-wrapper" href="#"><img src="images/Products/MAIN D.B.png" alt=""
+                                        width="370" height="272" /></a>
+                                <div class="post-body" id="product-body">
+                                    <h6 class="post-title"><a href="#">MAIN D.B.</a></h6>
                                 </div>
                             </article>
                         </div>
                         <div class="col-md-6 col-lg-4 wow fadeInRight" data-wow-delay="0.1s">
-                            <article class="post-boxed">
+                            <article class=" product-post-boxed">
                                 <div class="post-meta">
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-author"><span>by</span> <a href="#">Martha Ryan</a>
-                                        </div>
-                                    </div>
-                                    <div class="post-meta-item">
-                                        <div class="post-date">10:00am – 12:00am</div>
-                                    </div> -->
-                                </div><a class="media-wrapper" href="#"><img src="images/latest-blog-post-2-370x272.jpg"
+                                </div><a class="media-wrapper" href="#"><img src="images/Products/MAIN PCC PANEL.png"
                                         alt="" width="370" height="272" /></a>
-                                <div class="post-body">
-                                    <!-- <ul class="list-tags">
-                    <li><a class="tag-1" href="#">Interview</a>
-                    </li>
-                  </ul> -->
-                                    <h6 class="post-title"><a href="#">SBAJAJ ELECTRICALS LTD- Ranjangaon.
+                                <div class="post-body" id="product-body">
+                                    <h6 class="post-title"><a href="#">MAIN PCC PANEL
                                         </a>
                                     </h6>
-                                    <p class="post-exeption">a) Supply of PLC Base Crane control Panels-12 NO</p>
                                 </div>
                             </article>
                         </div>
                         <div class="col-md-6 col-lg-4 wow fadeInRight" data-wow-delay="0.2s">
-                            <article class="post-boxed">
+                            <article class=" product-post-boxed">
                                 <div class="post-meta">
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-author"><span>by</span> <a href="#">Martha Ryan</a>
-                                        </div>
-                                    </div>
-                                    <div class="post-meta-item">
-                                        <div class="post-date">12:00am – 03:00pm</div>
-                                    </div> -->
-                                </div><a class="media-wrapper" href="#"><img src="images/latest-blog-post-3-370x272.jpg"
-                                        alt="" width="370" height="272" /></a>
-                                <div class="post-body">
-                                    <!-- <ul class="list-tags">
-                    <li><a class="tag-1" href="#">Live</a>
-                    </li>
-                  </ul> -->
-                                    <h6 class="post-title"><a href="#"> ETERNAL EDUCATION EQUIPMENTS PVT LTD- Pirangut.
+                                </div><a class="media-wrapper" href="#"><img
+                                        src="images/Products/OLD VERTICAL KIOSK WITH 950KVA SUB – STATION.png" alt=""
+                                        width="370" height="272" /></a>
+                                <div class="post-body" id="product-body">
+                                    <h6 class="post-title"><a href="#">OLD VERTICAL KIOSK WITH 950KVA SUB – STATION
                                         </a></h6>
-                                    <p class="post-exeption">a) Supply & Installation of MCC Panel<br />
-                                        b) Industrial, Street and Office Lighting work<br />
-                                        c) Industrial Cabling with Tray work<br />
-                                        d) Earthing & Its allied Electrical work
-                                    </p>
                                 </div>
                             </article>
                         </div>
                         <!-- section 6 -->
                         <div class="col-md-6 col-lg-4 wow fadeInRight">
-                            <article class="post-boxed">
+                            <article class=" product-post-boxed">
                                 <div class="post-meta">
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-author"><span>by</span> <a href="#">Leona Burns</a>
-                                        </div>
-                                    </div> -->
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-date">07:00am – 10:00am</div>
-                                    </div> -->
-                                </div><a class="media-wrapper" href="#"><img src="images/latest-blog-post-1-370x272.jpg"
-                                        alt="" width="370" height="272" /></a>
-                                <div class="post-body">
-                                    <!-- <ul class="list-tags">
-                    <li><a class="tag-1" href="#">Program</a>
-                    </li>
-                  </ul> -->
-                                    <h6 class="post-title"><a href="#">KAMMAL ENGINEERING –Chakan.</a></h6>
-                                    <p class="post-exeption">a) Supply & Installation of 22 KV/433 V,100 KVA Pole
-                                        Mounted Substation with allied work<br />
-                                        b) Supply & Installation of Main MCC Panel<br />
-                                        c) Supply & Laying of Cable & Cable Tray with Fabrication<br />
-                                        d) Supply & Installation of 82.5 KVA DG Set<br />
-                                        e) Industrial & Office Lighting Work Earthing with Allied Work</p>
+                                </div><a class="media-wrapper" href="#"><img src="images/Products/PANEL WORK.png" alt=""
+                                        width="370" height="272" /></a>
+                                <div class="post-body" id="product-body">
+                                    <h6 class="post-title"><a href="#">PANEL WORK</a></h6>
                                 </div>
                             </article>
                         </div>
                         <div class="col-md-6 col-lg-4 wow fadeInRight" data-wow-delay="0.1s">
-                            <article class="post-boxed">
+                            <article class=" product-post-boxed">
                                 <div class="post-meta">
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-author"><span>by</span> <a href="#">Martha Ryan</a>
-                                        </div>
-                                    </div>
-                                    <div class="post-meta-item">
-                                        <div class="post-date">10:00am – 12:00am</div>
-                                    </div> -->
-                                </div><a class="media-wrapper" href="#"><img src="images/latest-blog-post-2-370x272.jpg"
+                                </div><a class="media-wrapper" href="#"><img src="images/Products/POWER WIRING.png"
                                         alt="" width="370" height="272" /></a>
-                                <div class="post-body">
-                                    <!-- <ul class="list-tags">
-                    <li><a class="tag-1" href="#">Interview</a>
-                    </li>
-                  </ul> -->
-                                    <h6 class="post-title"><a href="#"> RIJ ENGINEERING PVT LTD (FORGING PRESS SHOP)
+                                <div class="post-body" id="product-body">
+                                    <h6 class="post-title"><a href="#">POWER WIRING
                                         </a>
                                     </h6>
-                                    <p class="post-exeption">a) Supply & Installation of 22 KV Metering KIOSK with
-                                        Allied Electrical work<br />
-                                        b) Supply & Installation of 22 KV/433 V, 1000 KVA Transformer Substation with
-                                        allied Electrical work<br />
-                                        c) Supply & Installation of Main PCC & MCC Panel<br />
-                                        d) Supply & Laying of Cable & Cable Tray with Fabrication<br />
-                                        e) Supply & Installation of Industrial Lighting<br />
-                                        f) Earthing & Allied Work</p>
                                 </div>
                             </article>
                         </div>
                         <div class="col-md-6 col-lg-4 wow fadeInRight" data-wow-delay="0.2s">
-                            <article class="post-boxed">
+                            <article class=" product-post-boxed">
                                 <div class="post-meta">
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-author"><span>by</span> <a href="#">Martha Ryan</a>
-                                        </div>
-                                    </div>
-                                    <div class="post-meta-item">
-                                        <div class="post-date">12:00am – 03:00pm</div>
-                                    </div> -->
-                                </div><a class="media-wrapper" href="#"><img src="images/latest-blog-post-3-370x272.jpg"
+                                </div><a class="media-wrapper" href="#"><img src="images/Products/POWER WIRING2.png"
                                         alt="" width="370" height="272" /></a>
-                                <div class="post-body">
-                                    <!-- <ul class="list-tags">
-                    <li><a class="tag-1" href="#">Live</a>
-                    </li>
-                  </ul> -->
-                                    <h6 class="post-title"><a href="#"> BHARAT ENGINEERING
+                                <div class="post-body" id="product-body">
+                                    <h6 class="post-title"><a href="#"> POWER WIRING
                                         </a></h6>
-                                    <p class="post-exeption">a) Factory Electrification<br />
-                                        b) Supply & Installation of MCC & PCC Panels<br />
-                                        c) Lighting Cable Tray Work with Fabrication, Cable Laying & Termination
-                                    </p>
                                 </div>
                             </article>
                         </div>
                         <!-- section 7 -->
                         <div class="col-md-6 col-lg-4 wow fadeInRight">
-                            <article class="post-boxed">
+                            <article class=" product-post-boxed">
                                 <div class="post-meta">
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-author"><span>by</span> <a href="#">Leona Burns</a>
-                                        </div>
-                                    </div> -->
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-date">07:00am – 10:00am</div>
-                                    </div> -->
-                                </div><a class="media-wrapper" href="#"><img src="images/latest-blog-post-1-370x272.jpg"
-                                        alt="" width="370" height="272" /></a>
-                                <div class="post-body">
-                                    <!-- <ul class="list-tags">
-                    <li><a class="tag-1" href="#">Program</a>
-                    </li>
-                  </ul> -->
-                                    <h6 class="post-title"><a href="#"> PRAJ INDUSTRIES LIMITED – Bavdhan</a></h6>
-                                    <p class="post-exeption">a) Supply & Installation of Cable Tray (800 MM)<br />
-                                        b) Supply & Lying of Machine & Lighting Cable with Its Termination</p>
+                                </div><a class="media-wrapper" href="#"><img
+                                        src="images/Products/STRIVE INDIA EDUCATION FOUNDATION.png" alt="" width="370"
+                                        height="272" /></a>
+                                <div class="post-body" id="product-body">
+                                    <h6 class="post-title"><a href="#">STRIVE INDIA EDUCATION FOUNDATION</a></h6>
                                 </div>
                             </article>
                         </div>
                         <div class="col-md-6 col-lg-4 wow fadeInRight" data-wow-delay="0.1s">
-                            <article class="post-boxed">
+                            <article class=" product-post-boxed">
                                 <div class="post-meta">
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-author"><span>by</span> <a href="#">Martha Ryan</a>
-                                        </div>
-                                    </div>
-                                    <div class="post-meta-item">
-                                        <div class="post-date">10:00am – 12:00am</div>
-                                    </div> -->
-                                </div><a class="media-wrapper" href="#"><img src="images/latest-blog-post-2-370x272.jpg"
-                                        alt="" width="370" height="272" /></a>
-                                <div class="post-body">
-                                    <!-- <ul class="list-tags">
-                    <li><a class="tag-1" href="#">Interview</a>
-                    </li>
-                  </ul> -->
-                                    <h6 class="post-title"><a href="#"> ICICI BANK – Hyderabad
+                                </div><a class="media-wrapper" href="#"><img
+                                        src="images/Products/ZAHRA TOWER CHS WORLI MUMBAI (ATS BYPASS PANEL).png" alt=""
+                                        width="370" height="272" /></a>
+                                <div class="post-body" id="product-body">
+                                    <h6 class="post-title"><a href="#">ZAHRA TOWER CHS WORLI MUMBAI (ATS BYPASS PANEL)
                                         </a>
                                     </h6>
-                                    <p class="post-exeption">IBMS Work of Honeywell Automation India Pvt. Ltd.
-                                        (Installation & Commissioning Contract work of BMS,
-                                        CCTV, Access Control, and Fire Alarm System
-                                    </p>
                                 </div>
                             </article>
                         </div>
                         <div class="col-md-6 col-lg-4 wow fadeInRight" data-wow-delay="0.2s">
-                            <article class="post-boxed">
+                            <article class=" product-post-boxed">
                                 <div class="post-meta">
-                                    <!-- <div class="post-meta-item">
-                                        <div class="post-author"><span>by</span> <a href="#">Martha Ryan</a>
-                                        </div>
-                                    </div>
-                                    <div class="post-meta-item">
-                                        <div class="post-date">12:00am – 03:00pm</div>
-                                    </div> -->
-                                </div><a class="media-wrapper" href="#"><img src="images/latest-blog-post-3-370x272.jpg"
-                                        alt="" width="370" height="272" /></a>
-                                <div class="post-body">
-                                    <!-- <ul class="list-tags">
-                    <li><a class="tag-1" href="#">Live</a>
-                    </li>
-                  </ul> -->
-                                    <h6 class="post-title"><a href="#"> CHATRAPATI SHIVAJI MAHARAJ INTERNATIONAL AIRPORT
-                                            – Mumbai
-                                        </a></h6>
-                                    <p class="post-exeption">IBMS Work of Honeywell Automation India Pvt. Ltd.
-                                        (Installation & Commissioning Contract work of BMS,
-                                        Access Control, and Fire Alarm System)
-                                    </p>
+                                </div><a class="media-wrapper" href="#"><img
+                                        src="images/Products/PROACTIVE SHIP MANAGEMENT (JSW MARIN ENGINE).png" alt=""
+                                        width="370" height="272" /></a>
+                                <div class="post-body" id="product-body">
+                                    <h6 class="post-title"><a href="#">PROACTIVE SHIP MANAGEMENT (JSW MARIN ENGINE)</a>
+                                    </h6>
                                 </div>
                             </article>
                         </div>
                     </div>
                 </div>
             </section>
+            <!-- whatsapp -->
+            <div class="whatsapp">
+                <!-- WhatsApp icon -->
+                <a href="https://wa.me/9136114151" class="whatsapp_float" target="_blank" rel="noopener noreferrer">
+                    <icon class="fa fa-whatsapp whatsapp-icon"></icon>
+                </a>
+            </div>
+
             <!-- Page Footer-->
             <footer class="section footer-2">
                 <div class="container">
                     <div class="row row-40">
-                        <div class="col-md-6 col-lg-3"><a class="footer-logo" href="index.html"><img
-                                    src="images/logo-footer-360x52.png" alt="" width="180" height="26" /></a>
-                            <p>OnWave is one of the most popular radio stations broadcasting the best EDM & Rock tracks,
-                                shows, and
-                                performances worldwide. We were founded in 1999 to promote original Electronic, Jazz,
-                                and Rock music.
+                        <div class="col-md-6 col-lg-4"><a class="footer-logo" href="index.html"><img
+                                    src="images/Kaleshwari_Logo-removebg-preview.png" alt="" width="110"
+                                    height="15" /></a>
+                            <p>Novorbisisan initiative towards carbon upcycling and neutrality through innovative
+                                technologies and applications. We believe in creating disruptive technologies and
+                                create a positive impact over the environment.
                             </p>
                         </div>
-                        <div class="col-md-6 col-lg-3">
+                        <div class="col-md-6 col-lg-4">
                             <h5 class="text-white title">Contact Information</h5>
                             <ul class="contact-box">
                                 <li>
                                     <div class="unit unit-horizontal unit-spacing-xxs">
                                         <div class="unit-left"><span class="icon mdi mdi-map-marker accent-icon"></span>
                                         </div>
-                                        <div class="unit-body"><a href="#">2130 Fulton Street, <br
-                                                    class="veil reveal-lg-inline">San Diego,
-                                                CA
-                                                94117-1080 USA</a></div>
+                                        <div class="unit-body"><a href="#">Flat No. 203, Plot No. 117/118,
+                                                <br class="veil reveal-lg-inline">Sector - 01, Ghansoli Navi Mumbai -
+                                                400 701.</a></div>
                                     </div>
                                 </li>
                                 <li>
@@ -743,8 +452,8 @@
                                         </div>
                                         <div class="unit-body">
                                             <ul class="list-phones">
-                                                <li><a href="tel:#">1-800-1234-567</a></li>
-                                                <li><a href="tel:#">1-800-1234-567</a></li>
+                                                <li><a href="tel:#">+91 9136113151</a></li>
+                                                <li><a href="tel:#"></a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -753,7 +462,7 @@
                                     <div class="unit unit-horizontal unit-spacing-xxs">
                                         <div class="unit-left"><span
                                                 class="icon mdi mdi-email-outline accent-icon"></span></div>
-                                        <div class="unit-body"><a href="mailto:#">info@demolink.org</a></div>
+                                        <div class="unit-body"><a href="mailto:#">info@kaleshwariengineers.com</a></div>
                                     </div>
                                 </li>
                             </ul>
@@ -761,62 +470,51 @@
                                     class="icon icon-md novi-icon mdi mdi-facebook" href="#"></a><a
                                     class="icon icon-md novi-icon mdi mdi-twitter" href="#"></a><a
                                     class="icon icon-md novi-icon mdi mdi-instagram" href="#"></a><a
-                                    class="icon icon-md novi-icon mdi mdi-facebook-messenger" href="#"></a><a
-                                    class="icon icon-md novi-icon mdi mdi-linkedin" href="#"></a><a
-                                    class="icon icon-md novi-icon mdi mdi-snapchat" href="#"></a></div>
+                                    class="icon icon-md novi-icon mdi mdi-linkedin" href="#"></a>
+                            </div>
                         </div>
-                        <div class="col-md-6 col-lg-3">
+                        <div class="col-md-6 col-lg-4">
                             <h5 class="title">Gallery</h5>
                             <ul class="instafeed instagram-gallery" data-lightgallery="group">
                                 <li><a class="instagram-item" data-lightgallery="item"
-                                        href="images/insta-gallery-1-1200x800-original.jpg"><img
-                                            src="images/insta-gallery-1-72x72.jpg" alt="" width="72" height="72" /></a>
+                                        href="images/1200x800/images1_1200x800.png"><img src="images/images1.png" alt=""
+                                            width="72" height="72" /></a>
                                 </li>
                                 <li><a class="instagram-item" data-lightgallery="item"
-                                        href="images/insta-gallery-2-1200x800-original.jpg"><img
-                                            src="images/insta-gallery-2-72x72.jpg" alt="" width="72" height="72" /></a>
+                                        href="images/1200x800/images2_1200x800.png"><img src="images/images2.png" alt=""
+                                            width="72" height="72" /></a>
                                 </li>
                                 <li><a class="instagram-item" data-lightgallery="item"
-                                        href="images/insta-gallery-3-1200x800-original.jpg"><img
-                                            src="images/insta-gallery-3-72x72.jpg" alt="" width="72" height="72" /></a>
+                                        href="images/1200x800/images3_1200x800.png"><img src="images/images3.png" alt=""
+                                            width="72" height="72" /></a>
                                 </li>
                                 <li><a class="instagram-item" data-lightgallery="item"
-                                        href="images/insta-gallery-4-1200x800-original.jpg"><img
-                                            src="images/insta-gallery-4-72x72.jpg" alt="" width="72" height="72" /></a>
+                                        href="images/1200x800/images4_1200x800.png"><img src="images/images4.png" alt=""
+                                            width="72" height="72" /></a>
                                 </li>
                                 <li><a class="instagram-item" data-lightgallery="item"
-                                        href="images/insta-gallery-5-1200x800-original.jpg"><img
-                                            src="images/insta-gallery-5-72x72.jpg" alt="" width="72" height="72" /></a>
+                                        href="images/1200x800/images5_1200x800.png"><img src="images/images5.png" alt=""
+                                            width="72" height="72" /></a>
                                 </li>
                                 <li><a class="instagram-item" data-lightgallery="item"
-                                        href="images/insta-gallery-6-1200x800-original.jpg"><img
-                                            src="images/insta-gallery-6-72x72.jpg" alt="" width="72" height="72" /></a>
+                                        href="images/1200x800/images6_1200x800.png"><img src="images/images6.png" alt=""
+                                            width="72" height="72" /></a>
+                                </li>
+                                <li><a class="instagram-item" data-lightgallery="item"
+                                        href="images/1200x800/images7_1200x800.png"><img src="images/images7.png" alt=""
+                                            width="72" height="72" /></a>
+                                </li>
+                                <li><a class="instagram-item" data-lightgallery="item"
+                                        href="images/1200x800/images8_1200x800.png"><img src="images/images8.png" alt=""
+                                            width="72" height="72" /></a>
+                                </li>
+                                <li><a class="instagram-item" data-lightgallery="item"
+                                        href="images/1200x800/images9_1200x800.png"><img src="images/images9.png" alt=""
+                                            width="72" height="72" /></a>
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-md-6 col-lg-3">
-                            <h5 class="text-white title">Newsletter</h5>
-                            <p>Keep up with our always upcoming news and updates. Enter your e-mail and subscribe to our
-                                newsletter.
-                            </p>
-                            <!-- RD Mailform-->
-                            <form class="rd-form form-sm rd-mailform" data-form-output="form-output-global"
-                                data-form-type="contact" method="post" action="bat/rd-mailform.php">
-                                <div class="form-wrap">
-                                    <input class="form-input" id="newsletter-email" type="email" name="email"
-                                        data-constraints="@Email @Required">
-                                    <label class="form-label" for="newsletter-email">Enter your e-mail</label>
-                                </div>
-                                <button class="button button-primary" type="submit">Subscribe</button>
-                            </form>
-                        </div>
                     </div>
-                    <!-- Rights-->
-                    <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span> <span>OnWave</span>.
-                        All
-                        Rights
-                        Reserved. Design by <a href="https://www.templatemonster.com">TemplateMonster</a>
-                    </p>
                 </div>
             </footer>
         </div>

@@ -3,7 +3,7 @@
 <html class="wide wow-animation" lang="en">
 
 <head>
-    <title>Home</title>
+    <title>Projects</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport"
         content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -78,24 +78,11 @@
                                         <li class="rd-nav-item active"><a class="rd-nav-link"
                                                 href="Projects.html">Projects</a>
                                         </li>
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="Products.html">Products</a>
+                                        </li>
                                         <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
                                         </li>
                                     </ul>
-                                </div>
-                                <!-- RD Navbar Search-->
-                                <div class="rd-navbar-search">
-                                    <button class="rd-navbar-search-toggle rd-navbar-fixed-element-1"
-                                        data-rd-navbar-toggle=".rd-navbar-search"><span></span></button>
-                                    <form class="rd-search" action="#" method="GET">
-                                        <div class="form-wrap">
-                                            <label class="form-label" for="rd-navbar-search-form-input">Search</label>
-                                            <input class="rd-navbar-search-form-input form-input"
-                                                id="rd-navbar-search-form-input" type="text" name="s"
-                                                autocomplete="off">
-                                            <div class="rd-search-results-live" id="rd-search-results-live"></div>
-                                        </div>
-                                        <button class="rd-search-form-submit mdi mdi-magnify" type="submit"></button>
-                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -123,7 +110,7 @@
                         </div>
                     </div>
                 </div>
-                
+
             </section>
             <!--	Schedule of Radio Shows-->
             <section class="section section-lg bg-gray-100" id="projects-executed-section">
@@ -409,6 +396,13 @@
                     </div>
                 </div>
             </section>
+            <!-- whatsapp -->
+            <div class="whatsapp">
+                <!-- WhatsApp icon -->
+                <a href="https://wa.me/9136114151" class="whatsapp_float" target="_blank" rel="noopener noreferrer">
+                    <icon class="fa fa-whatsapp whatsapp-icon"></icon>
+                </a>
+            </div>
             <!-- Page Footer-->
             <footer class="section footer-2">
                 <div class="container">
@@ -508,6 +502,23 @@
         <!-- Global Mailform Output-->
         <div class="snackbars" id="form-output-global"></div>
     </div>
+    <!-- SPLASH SCREEN START -->
+    <div class="splash-screen">
+        <!-- Replace 'splash-image.jpg' with the path to your splash screen image -->
+        <img src="/images/kaleshwari-logo.png" alt="Splash Screen Image">
+    </div>
+
+    <script>
+        // After the animation completes, hide the splash screen and show the main content
+        document.querySelector('.splash-screen img').addEventListener('animationend', function () {
+            // Hide the splash screen
+            document.querySelector('.splash-screen').style.display = 'none';
+            // Show the main content
+            document.getElementById('main-content').style.display = 'block';
+        });
+    </script>
+
+    <!-- SPLASH SCREEN END -->
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
