@@ -3370,6 +3370,7 @@ textarea.form-input {
 	background: #ffffff;
 	border-radius: 6px;
 	transition: .3s;
+	height: 300px;
 }
 
 .post-boxed .post-author a {
@@ -3442,6 +3443,7 @@ textarea.form-input {
 		margin-top: 9px;
 	}
 }
+
 
 /*
 * Post modern
