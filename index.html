@@ -18,6 +18,49 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
   <style>
+    /* Center the splash screen */
+    .splash-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      /* Change this to your preferred background color */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      /* Ensure the splash screen is on top of everything */
+    }
+
+    /* Style the image inside the splash screen */
+    .splash-screen img {
+      max-width: 300px;
+      max-height: 300px;
+      animation: splashAnimation 3s ease-out;
+      /* Apply animation */
+      transform-origin: center;
+    }
+
+    /* Keyframes for the animation */
+    @keyframes splashAnimation {
+      0% {
+        transform: scale(0.1);
+        /* Start from small size */
+      }
+
+      100% {
+        transform: scale(1);
+        /* End at full size */
+      }
+    }
+
+    /* Hide the main content initially */
+    #main-content {
+      display: none;
+    }
+
     .ie-panel {
       display: none;
       background: #212121;
@@ -78,23 +121,11 @@
                     </li>
                     <li class="rd-nav-item"><a class="rd-nav-link" href="Projects.html">Projects</a>
                     </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="Products.html">Products</a>
+                    </li>
                     <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
                     </li>
                   </ul>
-                </div>
-                <!-- RD Navbar Search-->
-                <div class="rd-navbar-search">
-                  <button class="rd-navbar-search-toggle rd-navbar-fixed-element-1"
-                    data-rd-navbar-toggle=".rd-navbar-search"><span></span></button>
-                  <form class="rd-search" action="#" method="GET">
-                    <div class="form-wrap">
-                      <label class="form-label" for="rd-navbar-search-form-input">Search</label>
-                      <input class="rd-navbar-search-form-input form-input" id="rd-navbar-search-form-input" type="text"
-                        name="s" autocomplete="off">
-                      <div class="rd-search-results-live" id="rd-search-results-live"></div>
-                    </div>
-                    <button class="rd-search-form-submit mdi mdi-magnify" type="submit"></button>
-                  </form>
                 </div>
               </div>
             </div>
@@ -120,16 +151,6 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="swiper-meta">
-          <ul class="links">
-            <li><a class="icon icon-meta mdi mdi-facebook" href="#"></a></li>
-            <li><a class="icon icon-meta mdi mdi-twitter" href="#"></a></li>
-            <li><a class="icon icon-meta mdi mdi-instagram" href="#"></a></li>
-            <li><a class="icon icon-meta mdi mdi-facebook-messenger" href="#"></a></li>
-            <li><a class="icon icon-meta mdi mdi-linkedin" href="#"></a></li>
-            <li><a class="icon icon-meta mdi mdi-snapchat" href="#"></a></li>
-          </ul>
         </div>
       </section>
       <!--Player-->
@@ -183,123 +204,7 @@
         </div>
       </section> -->
       <!-- Variety of Music Genres-->
-      <section class="section section-lg">
-        <div class="container">
-          <div class="block-lg text-center">
-            <h2>A Variety of Music Genres</h2>
-            <p>We are pleased to introduce ourselves as a Government Licensed Electrical Contractor. & all kind
-              of Electrical Services Provider.
-            </p>
-          </div>
-          <div class="row row-30 justify-content-center">
-            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeInLeft"><a class="variety-box-wrapper" href="#">
-                <figure class="variety-box">
-                  <div class="variety-media">
-                    <img src="https://icons8.com/icon/6703/lightning-bolt" alt="" width="49" height="49">
-                  </div>
-                  <figcaption><span>Electrical Consultancy</span>
-                    <!-- <p>We pick the best House music for our listeners.</p> -->
-                  </figcaption>
-                </figure>
-              </a>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeInLeft"><a class="variety-box-wrapper" href="#">
-                <figure class="variety-box">
-                  <div class="variety-media"><img src="images/music-style-2-47x56.png" alt="" width="47" height="56" />
-                  </div>
-                  <figcaption><span>H.T.& L.T. Installation & Erection of Sub-Station</span>
-                    <!-- <p>Enjoy top-notch Liquid D&amp;B and Neurofunk music on our radio.</p> -->
-                  </figcaption>
-                </figure>
-              </a>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeInLeft"><a class="variety-box-wrapper" href="#">
-                <figure class="variety-box">
-                  <div class="variety-media"><img src="images/music-style-2-47x56.png" alt="" width="47" height="56" />
-                  </div>
-                  <figcaption><span>Electrical Estimation & Design</span>
-                    <!-- <p>Enjoy top-notch Liquid D&amp;B and Neurofunk music on our radio.</p> -->
-                  </figcaption>
-                </figure>
-              </a>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeInLeft"><a class="variety-box-wrapper" href="#">
-                <figure class="variety-box">
-                  <div class="variety-media"><img src="images/music-style-2-47x56.png" alt="" width="47" height="56" />
-                  </div>
-                  <figcaption><span>Industrial & Commercial Electrification</span>
-                    <!-- <p>Enjoy top-notch Liquid D&amp;B and Neurofunk music on our radio.</p> -->
-                  </figcaption>
-                </figure>
-              </a>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeInLeft"><a class="variety-box-wrapper" href="#">
-                <figure class="variety-box">
-                  <div class="variety-media"><img src="images/music-style-5-51x48.png" alt="" width="51" height="48" />
-                  </div>
-                  <figcaption><span>Specialization in Cable Tray work & DG Electrical Automation </span>
-                    <!-- <p>Listen to the top-notch Breaks selection on OnWave.</p> -->
-                  </figcaption>
-                </figure>
-              </a>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeInLeft"><a class="variety-box-wrapper" href="#">
-                <figure class="variety-box">
-                  <div class="variety-media"><img src="images/music-style-4-53x45.png" alt="" width="53" height="45" />
-                  </div>
-                  <figcaption><span>• Manufacturing of Control Panels</span>
-                    <!-- <p>Our DJs broadcast various Trance tracks on OnWave.</p> -->
-                  </figcaption>
-                </figure>
-              </a>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeInLeft"><a class="variety-box-wrapper" href="#">
-                <figure class="variety-box">
-                  <div class="variety-media"><img src="images/music-style-3-37x46.png" alt="" width="37" height="46" />
-                  </div>
-                  <figcaption><span>Service & Prod Industrial Maintenance</span>
-                    <!-- <p>Dozens of new Dubstep tracks are aired regularly on OnWave.</p> -->
-                  </figcaption>
-                </figure>
-              </a>
-            </div>
 
-            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeInLeft"><a class="variety-box-wrapper" href="#">
-                <figure class="variety-box">
-                  <div class="variety-media"><img src="images/music-style-8-39x54.png" alt="" width="39" height="54" />
-                  </div>
-                  <figcaption><span>Annual Maintenance Contracts (AMC) DG, & Electrical Installation</span>
-                    <!-- <p>We pick the best Jazz music for our listeners.</p> -->
-                  </figcaption>
-                </figure>
-              </a>
-            </div>
-            <!-- here -->
-            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeInLeft"><a class="variety-box-wrapper" href="#">
-                <figure class="variety-box">
-                  <div class="variety-media"><img src="images/music-style-7-25x63.png" alt="" width="25" height="63" />
-                  </div>
-                  <figcaption><span>D. G. Set Registration and Installation and all kind of DG Mechanical work (Major
-                      Overhauling)</span>
-                    <!-- <p>Weekly concerts and rock exclusives - only on OnWave..</p> -->
-                  </figcaption>
-                </figure>
-              </a>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeInLeft"><a class="variety-box-wrapper" href="#">
-                <figure class="variety-box">
-                  <div class="variety-media"><img src="images/music-style-6-31x50.png" alt="" width="31" height="50" />
-                  </div>
-                  <figcaption><span>Liaisoning Work for M.S.E.D.C.L., adani power, BEST. & Electrical Inspector Office
-                    </span>
-                    <!-- <p>Discover all subgenres of legendary Techno on our radio.</p> -->
-                  </figcaption>
-                </figure>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
       <!--	Schedule of Radio Shows-->
       <section class="section section-lg bg-gray-100">
         <div class="container text-center">
@@ -319,8 +224,7 @@
                   <!-- <div class="post-meta-item">
                     <div class="post-date">07:00am – 10:00am</div>
                   </div> -->
-                </div><a class="media-wrapper" href="#"><img src="images/latest-blog-post-1-370x272.jpg" alt=""
-                    width="370" height="272" /></a>
+                </div>
                 <div class="post-body">
                   <!-- <ul class="list-tags">
                     <li><a class="tag-1" href="#">Program</a>
@@ -339,20 +243,8 @@
             <div class="col-md-6 col-lg-4 wow fadeInRight" data-wow-delay="0.1s">
               <article class="post-boxed">
                 <div class="post-meta">
-                  <!-- <div class="post-meta-item">
-                    <div class="post-author"><span>by</span> <a href="#">Martha Ryan</a>
-                    </div>
-                  </div> -->
-                  <!-- <div class="post-meta-item">
-                    <div class="post-date">10:00am – 12:00am</div>
-                  </div> -->
-                </div><a class="media-wrapper" href="#"><img src="images/latest-blog-post-2-370x272.jpg" alt=""
-                    width="370" height="272" /></a>
+                </div>
                 <div class="post-body">
-                  <!-- <ul class="list-tags">
-                    <li><a class="tag-1" href="#">Interview</a>
-                    </li>
-                  </ul> -->
                   <h6 class="post-title"><a href="#">SIARA Engineering Pvt. Ltd. Chakan
                     </a>
                   </h6>
@@ -368,20 +260,8 @@
             <div class="col-md-6 col-lg-4 wow fadeInRight" data-wow-delay="0.2s">
               <article class="post-boxed">
                 <div class="post-meta">
-                  <!-- <div class="post-meta-item">
-                    <div class="post-author"><span>by</span> <a href="#">Martha Ryan</a>
-                    </div>
-                  </div>
-                  <div class="post-meta-item">
-                    <div class="post-date">12:00am – 03:00pm</div>
-                  </div> -->
-                </div><a class="media-wrapper" href="#"><img src="images/latest-blog-post-3-370x272.jpg" alt=""
-                    width="370" height="272" /></a>
+                </div>
                 <div class="post-body">
-                  <!-- <ul class="list-tags">
-                    <li><a class="tag-1" href="#">Live</a>
-                    </li>
-                  </ul> -->
                   <h6 class="post-title"><a href="#"> ABHIJEET Engineers, Somatane Phata.
                     </a></h6>
                   <p class="post-exeption">a) 22 KV/433 V, 200 KVA, Pole Mounted Transformer Sub-Station with allied
@@ -402,46 +282,45 @@
       <!-- Why You Should Listen to OnWave-->
       <section class="section section-lg">
         <div class="container text-center">
-          <h2>Why You Should Listen to OnWave</h2>
+          <h2>Why Choose us and Install RECD?</h2>
           <div class="row row-40 justify-content-center number-counter">
             <div class="col-sm-6 col-lg-3 wow fadeInLeft">
               <div class="blurb-icon-fill">
-                <div class="icon linearicons-star"><span class="index-counter"></span></div>
-                <h5 class="title">Best Music Selection</h5>
-                <p class="exeption">OnWave offers its listeners the best music in various styles, from electronic to
-                  rock
-                  music.</p>
+                <div class="icon linearicons-cog"><span class="index-counter"></span></div>
+                <h5 class="title">DG Set <br /> Compliance</h5>
+                <p class="exeption">RECD ensures genset longevity by controlling emissions under strict norms, without
+                  harming the engine.</p>
               </div>
             </div>
             <div class="col-sm-6 col-lg-3 wow fadeInLeft" data-wow-delay="0.1s">
               <div class="blurb-icon-fill">
-                <div class="icon linearicons-news"><span class="index-counter"></span></div>
-                <h5 class="title">Latest News</h5>
-                <p class="exeption">Our hosts are always ready to share with you the latest regional and global news and
-                  updates.</p>
+                <div class="icon linearicons-server"><span class="index-counter"></span></div>
+                <h5 class="title">Innovative <br /> Technology</h5>
+                <p class="exeption">Filter-less air purification technology is our specialty and it is the best solution
+                  for DG sets.</p>
               </div>
             </div>
             <div class="col-sm-6 col-lg-3 wow fadeInLeft" data-wow-delay="0.2s">
               <div class="blurb-icon-fill">
-                <div class="icon linearicons-sun"><span class="index-counter"></span></div>
-                <h5 class="title">Available Everywhere</h5>
-                <p class="exeption">You can listen to our radio both online and offline via any devices, gadgets or
-                  radios.</p>
+                <div class="icon linearicons-recycle"><span class="index-counter"></span></div>
+                <h5 class="title">Pollution Reduction Contribution</h5>
+                <p class="exeption">The device aims to reduce pollution, involving you in Novorbis's journey to cut
+                  carbon emissions.</p>
               </div>
             </div>
-            <div class="col-sm-6 col-lg-3 wow fadeInLeft" data-wow-delay="0.3s">
+            <!-- <div class="col-sm-6 col-lg-3 wow fadeInLeft" data-wow-delay="0.3s">
               <div class="blurb-icon-fill">
                 <div class="icon linearicons-medal-empty"><span class="index-counter"></span></div>
                 <h5 class="title">Best DJ Shows</h5>
                 <p class="exeption">OnWave regularly broadcasts shows from the best DJs in the world that play exclusive
                   tracks for you.</p>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
       <!-- Call to action-->
-      <section class="section section-xs bg-primary-gradient">
+      <!-- <section class="section section-xs bg-primary-gradient">
         <div class="container">
           <div class="box-cta">
             <div class="box-cta-inner">
@@ -450,19 +329,19 @@
             <div class="box-cta-inner"><a class="button button-md button-white" href="#">Listen Online</a></div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- Pricing-->
-      <section class="section section-lg hide">
+      <!-- <section class="section section-lg hide">
         <div class="container text-center">
           <h2>Cities and Frequencies</h2>
           <div class="row no-gutters justify-content-center bg-img-2"></div>
         </div>
-      </section>
+      </section> -->
       <!-- whatsapp -->
       <div class="whatsapp">
         <!-- WhatsApp icon -->
-        <a href="https://wa.me/7977584476" class="whatsapp_float" target="_blank" rel="noopener noreferrer">
-          <i class="fa fa-whatsapp whatsapp-icon"></i>
+        <a href="https://wa.me/9136114151" class="whatsapp_float" target="_blank" rel="noopener noreferrer">
+          <icon class="fa fa-whatsapp whatsapp-icon"></icon>
         </a>
       </div>
 
@@ -470,30 +349,33 @@
       <footer class="section footer-2">
         <div class="container">
           <div class="row row-40">
-            <div class="col-md-6 col-lg-3"><a class="footer-logo" href="index.html"><img
-                  src="images/logo-footer-360x52.png" alt="" width="180" height="26" /></a>
-              <p>OnWave is one of the most popular radio stations broadcasting the best EDM & Rock tracks, shows, and
-                performances worldwide. We were founded in 1999 to promote original Electronic, Jazz, and Rock music.
+            <div class="col-md-6 col-lg-4"><a class="footer-logo" href="index.html"><img
+                  src="images/Kaleshwari_Logo-removebg-preview.png" alt="" width="110" height="15" /></a>
+              <p>Novorbisisan initiative towards carbon upcycling and neutrality through innovative
+                technologies and applications. We believe in creating disruptive technologies and
+                create a positive impact over the environment.
               </p>
             </div>
-            <div class="col-md-6 col-lg-3">
+            <div class="col-md-6 col-lg-4">
               <h5 class="text-white title">Contact Information</h5>
               <ul class="contact-box">
                 <li>
                   <div class="unit unit-horizontal unit-spacing-xxs">
-                    <div class="unit-left"><span class="icon mdi mdi-map-marker accent-icon"></span></div>
-                    <div class="unit-body"><a href="#">2130 Fulton Street, <br class="veil reveal-lg-inline">San Diego,
-                        CA
-                        94117-1080 USA</a></div>
+                    <div class="unit-left"><span class="icon mdi mdi-map-marker accent-icon"></span>
+                    </div>
+                    <div class="unit-body"><a href="#">Flat No. 203, Plot No. 117/118,
+                        <br class="veil reveal-lg-inline">Sector - 01, Ghansoli Navi Mumbai -
+                        400 701.</a></div>
                   </div>
                 </li>
                 <li>
                   <div class="unit unit-horizontal unit-spacing-xxs">
-                    <div class="unit-left"><span class="icon mdi mdi-phone accent-icon"></span></div>
+                    <div class="unit-left"><span class="icon mdi mdi-phone accent-icon"></span>
+                    </div>
                     <div class="unit-body">
                       <ul class="list-phones">
-                        <li><a href="tel:#">1-800-1234-567</a></li>
-                        <li><a href="tel:#">1-800-1234-567</a></li>
+                        <li><a href="tel:#">+91 9136113151</a></li>
+                        <li><a href="tel:#"></a></li>
                       </ul>
                     </div>
                   </div>
@@ -501,73 +383,73 @@
                 <li>
                   <div class="unit unit-horizontal unit-spacing-xxs">
                     <div class="unit-left"><span class="icon mdi mdi-email-outline accent-icon"></span></div>
-                    <div class="unit-body"><a href="mailto:#">info@demolink.org</a></div>
+                    <div class="unit-body"><a href="mailto:#">info@kaleshwariengineers.com</a></div>
                   </div>
                 </li>
               </ul>
               <div class="group-md group-middle social-items"><a class="icon icon-md novi-icon mdi mdi-facebook"
                   href="#"></a><a class="icon icon-md novi-icon mdi mdi-twitter" href="#"></a><a
                   class="icon icon-md novi-icon mdi mdi-instagram" href="#"></a><a
-                  class="icon icon-md novi-icon mdi mdi-facebook-messenger" href="#"></a><a
-                  class="icon icon-md novi-icon mdi mdi-linkedin" href="#"></a><a
-                  class="icon icon-md novi-icon mdi mdi-snapchat" href="#"></a></div>
+                  class="icon icon-md novi-icon mdi mdi-linkedin" href="#"></a>
+              </div>
             </div>
-            <div class="col-md-6 col-lg-3">
+            <div class="col-md-6 col-lg-4">
               <h5 class="title">Gallery</h5>
               <ul class="instafeed instagram-gallery" data-lightgallery="group">
-                <li><a class="instagram-item" data-lightgallery="item"
-                    href="images/insta-gallery-1-1200x800-original.jpg"><img src="images/insta-gallery-1-72x72.jpg"
-                      alt="" width="72" height="72" /></a>
+                <li><a class="instagram-item" data-lightgallery="item" href="images/1200x800/images1_1200x800.png"><img
+                      src="images/images1.png" alt="" width="72" height="72" /></a>
                 </li>
-                <li><a class="instagram-item" data-lightgallery="item"
-                    href="images/insta-gallery-2-1200x800-original.jpg"><img src="images/insta-gallery-2-72x72.jpg"
-                      alt="" width="72" height="72" /></a>
+                <li><a class="instagram-item" data-lightgallery="item" href="images/1200x800/images2_1200x800.png"><img
+                      src="images/images2.png" alt="" width="72" height="72" /></a>
                 </li>
-                <li><a class="instagram-item" data-lightgallery="item"
-                    href="images/insta-gallery-3-1200x800-original.jpg"><img src="images/insta-gallery-3-72x72.jpg"
-                      alt="" width="72" height="72" /></a>
+                <li><a class="instagram-item" data-lightgallery="item" href="images/1200x800/images3_1200x800.png"><img
+                      src="images/images3.png" alt="" width="72" height="72" /></a>
                 </li>
-                <li><a class="instagram-item" data-lightgallery="item"
-                    href="images/insta-gallery-4-1200x800-original.jpg"><img src="images/insta-gallery-4-72x72.jpg"
-                      alt="" width="72" height="72" /></a>
+                <li><a class="instagram-item" data-lightgallery="item" href="images/1200x800/images4_1200x800.png"><img
+                      src="images/images4.png" alt="" width="72" height="72" /></a>
                 </li>
-                <li><a class="instagram-item" data-lightgallery="item"
-                    href="images/insta-gallery-5-1200x800-original.jpg"><img src="images/insta-gallery-5-72x72.jpg"
-                      alt="" width="72" height="72" /></a>
+                <li><a class="instagram-item" data-lightgallery="item" href="images/1200x800/images5_1200x800.png"><img
+                      src="images/images5.png" alt="" width="72" height="72" /></a>
                 </li>
-                <li><a class="instagram-item" data-lightgallery="item"
-                    href="images/insta-gallery-6-1200x800-original.jpg"><img src="images/insta-gallery-6-72x72.jpg"
-                      alt="" width="72" height="72" /></a>
+                <li><a class="instagram-item" data-lightgallery="item" href="images/1200x800/images6_1200x800.png"><img
+                      src="images/images6.png" alt="" width="72" height="72" /></a>
+                </li>
+                <li><a class="instagram-item" data-lightgallery="item" href="images/1200x800/images7_1200x800.png"><img
+                      src="images/images7.png" alt="" width="72" height="72" /></a>
+                </li>
+                <li><a class="instagram-item" data-lightgallery="item" href="images/1200x800/images8_1200x800.png"><img
+                      src="images/images8.png" alt="" width="72" height="72" /></a>
+                </li>
+                <li><a class="instagram-item" data-lightgallery="item" href="images/1200x800/images9_1200x800.png"><img
+                      src="images/images9.png" alt="" width="72" height="72" /></a>
                 </li>
               </ul>
             </div>
-            <div class="col-md-6 col-lg-3">
-              <h5 class="text-white title">Newsletter</h5>
-              <p>Keep up with our always upcoming news and updates. Enter your e-mail and subscribe to our newsletter.
-              </p>
-              <!-- RD Mailform-->
-              <form class="rd-form form-sm rd-mailform" data-form-output="form-output-global" data-form-type="contact"
-                method="post" action="bat/rd-mailform.php">
-                <div class="form-wrap">
-                  <input class="form-input" id="newsletter-email" type="email" name="email"
-                    data-constraints="@Email @Required">
-                  <label class="form-label" for="newsletter-email">Enter your e-mail</label>
-                </div>
-                <button class="button button-primary" type="submit">Subscribe</button>
-              </form>
-            </div>
           </div>
-          <!-- Rights-->
-          <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span> <span>OnWave</span>. All
-            Rights
-            Reserved. Design by <a href="https://www.templatemonster.com">TemplateMonster</a>
-          </p>
         </div>
       </footer>
     </div>
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
   </div>
+
+  <!-- SPLASH SCREEN START -->
+  <div class="splash-screen">
+    <!-- Replace 'splash-image.jpg' with the path to your splash screen image -->
+    <img src="/images/kaleshwari-logo.png" alt="Splash Screen Image">
+  </div>
+
+  <script>
+    // After the animation completes, hide the splash screen and show the main content
+    document.querySelector('.splash-screen img').addEventListener('animationend', function () {
+      // Hide the splash screen
+      document.querySelector('.splash-screen').style.display = 'none';
+      // Show the main content
+      document.getElementById('main-content').style.display = 'block';
+    });
+  </script>
+
+  <!-- SPLASH SCREEN END -->
   <!-- Javascript-->
   <script src="js/core.min.js"></script>
   <script src="js/script.js"></script>

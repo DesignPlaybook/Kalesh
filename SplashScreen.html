@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splash Screen Example</title>
+    <style>
+        /* Center the splash screen */
+        .splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            /* Change this to your preferred background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            /* Ensure the splash screen is on top of everything */
+        }
+
+        /* Style the image inside the splash screen */
+        .splash-screen img {
+            max-width: 100%;
+            max-height: 100%;
+            animation: splashAnimation 3s ease-out;
+            /* Apply animation */
+            transform-origin: center;
+        }
+
+        /* Keyframes for the animation */
+        @keyframes splashAnimation {
+            0% {
+                transform: scale(0.1);
+                /* Start from small size */
+            }
+
+            100% {
+                transform: scale(1);
+                /* End at full size */
+            }
+        }
+
+        /* Hide the main content initially */
+        #main-content {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="splash-screen">
+        <!-- Replace 'splash-image.jpg' with the path to your splash screen image -->
+        <img src="/Assets/Kaleshwari_Logo.png" alt="Splash Screen Image">
+    </div>
+
+    <!-- Your main content goes here -->
+    <div id="main-content">
+        <!-- Add your main content here -->
+        <link rel="stylesheet" href="Services.html">
+    </div>
+
+    <script>
+        // After the animation completes, hide the splash screen and show the main content
+        document.querySelector('.splash-screen img').addEventListener('animationend', function () {
+            // Hide the splash screen
+            document.querySelector('.splash-screen').style.display = 'none';
+            // Show the main content
+            document.getElementById('main-content').style.display = 'block';
+        });
+    </script>
+
+</body>
+
+</html>
