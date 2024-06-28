@@ -43,8 +43,8 @@
 	 * @param {object} elem - jQuery object
 	 * @return {boolean}
 	 */
-	function isScrolledIntoView ( elem ) {
-		if ( isNoviBuilder ) return true;
+	function isScrolledIntoView(elem) {
+		if (isNoviBuilder) return true;
 		return elem.offset().top + elem.outerHeight() >= $window.scrollTop() && elem.offset().top <= $window.scrollTop() + $window.height();
 	}
 
@@ -53,16 +53,16 @@
 	 * @param {object} element - jQuery object
 	 * @param {function} func - init function
 	 */
-	function lazyInit( element, func ) {
+	function lazyInit(element, func) {
 		var scrollHandler = function () {
-			if ( ( !element.hasClass( 'lazy-loaded' ) && ( isScrolledIntoView( element ) ) ) ) {
+			if ((!element.hasClass('lazy-loaded') && (isScrolledIntoView(element)))) {
 				func.call();
-				element.addClass( 'lazy-loaded' );
+				element.addClass('lazy-loaded');
 			}
 		};
 
 		scrollHandler();
-		$window.on( 'scroll', scrollHandler );
+		$window.on('scroll', scrollHandler);
 	}
 
 	// Initialize scripts that require a loaded page
@@ -70,7 +70,7 @@
 		// Page loader & Page transition
 		if (plugins.preloader.length && !isNoviBuilder) {
 			pageTransition({
-				target: document.querySelector( '.page' ),
+				target: document.querySelector('.page'),
 				delay: 0,
 				duration: 500,
 				classIn: 'fadeIn',
@@ -79,10 +79,10 @@
 				conditions: function (event, link) {
 					return !/(\#|javascript:|callto:|tel:|mailto:|:\/\/)/.test(link) && !event.currentTarget.hasAttribute('data-lightgallery');
 				},
-				onTransitionStart: function ( options ) {
-					setTimeout( function () {
+				onTransitionStart: function (options) {
+					setTimeout(function () {
 						plugins.preloader.removeClass('loaded');
-					}, options.duration * .75 );
+					}, options.duration * .75);
 				},
 				onReady: function () {
 					plugins.preloader.addClass('loaded');
@@ -293,9 +293,9 @@
 			regula.custom({
 				name: 'PhoneNumber',
 				defaultMessage: 'Invalid phone number format',
-				validator: function() {
-					if ( this.value === '' ) return true;
-					else return /^(\+\d)?[0-9\-\(\) ]{5,}$/i.test( this.value );
+				validator: function () {
+					if (this.value === '') return true;
+					else return /^(\+\d)?[0-9\-\(\) ]{5,}$/i.test(this.value);
 				}
 			});
 
@@ -312,7 +312,7 @@
 				if (e.type !== "blur") if (!$this.parent().hasClass("has-error")) return;
 				if ($this.parents('.rd-mailform').hasClass('success')) return;
 
-				if (( results = $this.regula('validate') ).length) {
+				if ((results = $this.regula('validate')).length) {
 					for (i = 0; i < results.length; i++) {
 						$this.siblings(".form-validation").text(results[i].message).parent().addClass("has-error");
 					}
@@ -393,9 +393,9 @@
 			plugins.bootstrapTooltip.tooltip('dispose');
 
 			if (window.innerWidth < 576) {
-				plugins.bootstrapTooltip.tooltip({placement: 'bottom'});
+				plugins.bootstrapTooltip.tooltip({ placement: 'bottom' });
 			} else {
-				plugins.bootstrapTooltip.tooltip({placement: tooltipPlacement});
+				plugins.bootstrapTooltip.tooltip({ placement: tooltipPlacement });
 			}
 		}
 
@@ -474,18 +474,18 @@
 			try {
 				coordinates = JSON.parse(str);
 				callback(new google.maps.LatLng(
-						coordinates.lat,
-						coordinates.lng
+					coordinates.lat,
+					coordinates.lng
 				), marker, map)
 			} catch (e) {
-				map.geocoder.geocode({'address': str}, function (results, status) {
+				map.geocoder.geocode({ 'address': str }, function (results, status) {
 					if (status === google.maps.GeocoderStatus.OK) {
 						var latitude = results[0].geometry.location.lat();
 						var longitude = results[0].geometry.location.lng();
 
 						callback(new google.maps.LatLng(
-								parseFloat(latitude),
-								parseFloat(longitude)
+							parseFloat(latitude),
+							parseFloat(longitude)
 						), marker, map)
 					}
 				})
@@ -498,16 +498,16 @@
 		function initMaps() {
 			var key;
 
-			for ( var i = 0; i < plugins.maps.length; i++ ) {
-				if ( plugins.maps[i].hasAttribute( "data-key" ) ) {
-					key = plugins.maps[i].getAttribute( "data-key" );
+			for (var i = 0; i < plugins.maps.length; i++) {
+				if (plugins.maps[i].hasAttribute("data-key")) {
+					key = plugins.maps[i].getAttribute("data-key");
 					break;
 				}
 			}
 
-			$.getScript('//maps.google.com/maps/api/js?'+ ( key ? 'key='+ key + '&' : '' ) +'sensor=false&libraries=geometry,places&v=quarterly', function () {
+			$.getScript('//maps.google.com/maps/api/js?' + (key ? 'key=' + key + '&' : '') + 'sensor=false&libraries=geometry,places&v=quarterly', function () {
 				var head = document.getElementsByTagName('head')[0],
-						insertBefore = head.insertBefore;
+					insertBefore = head.insertBefore;
 
 				head.insertBefore = function (newElement, referenceElement) {
 					if (newElement.href && newElement.href.indexOf('//fonts.googleapis.com/css?family=Roboto') !== -1 || newElement.innerHTML.indexOf('gm-style') !== -1) {
@@ -526,7 +526,7 @@
 						zoom: zoom,
 						styles: styles,
 						scrollwheel: false,
-						center: {lat: 0, lng: 0}
+						center: { lat: 0, lng: 0 }
 					});
 
 					// Add map object to map node
@@ -543,11 +543,11 @@
 					// Add markers from google-map-markers array
 					var markerItems = plugins.maps[i].querySelectorAll(".google-map-markers li");
 
-					if (markerItems.length){
+					if (markerItems.length) {
 						var markers = [];
-						for (var j = 0; j < markerItems.length; j++){
+						for (var j = 0; j < markerItems.length; j++) {
 							var markerElement = markerItems[j];
-							getLatLngObject(markerElement.getAttribute("data-location"), markerElement, plugins.maps[i], function(location, markerElement, mapElement){
+							getLatLngObject(markerElement.getAttribute("data-location"), markerElement, plugins.maps[i], function (location, markerElement, mapElement) {
 								var icon = markerElement.getAttribute("data-icon") || mapElement.getAttribute("data-icon");
 								var activeIcon = markerElement.getAttribute("data-icon-active") || mapElement.getAttribute("data-icon-active");
 								var info = markerElement.getAttribute("data-description") || "";
@@ -559,15 +559,15 @@
 									position: location,
 									map: mapElement.map
 								}
-								if (icon){
+								if (icon) {
 									markerData.icon = icon;
 								}
 								var marker = new google.maps.Marker(markerData);
 								markerElement.gmarker = marker;
-								markers.push({markerElement: markerElement, infoWindow: infoWindow});
+								markers.push({ markerElement: markerElement, infoWindow: infoWindow });
 								marker.isActive = false;
 								// Handle infoWindow close click
-								google.maps.event.addListener(infoWindow,'closeclick',(function(markerElement, mapElement){
+								google.maps.event.addListener(infoWindow, 'closeclick', (function (markerElement, mapElement) {
 									var markerIcon = null;
 									markerElement.gmarker.isActive = false;
 									markerIcon = markerElement.getAttribute("data-icon") || mapElement.getAttribute("data-icon");
@@ -576,16 +576,16 @@
 
 
 								// Set marker active on Click and open infoWindow
-								google.maps.event.addListener(marker, 'click', (function(markerElement, mapElement) {
+								google.maps.event.addListener(marker, 'click', (function (markerElement, mapElement) {
 									if (markerElement.infoWindow.getContent().length === 0) return;
 									var gMarker, currentMarker = markerElement.gmarker, currentInfoWindow;
-									for (var k =0; k < markers.length; k++){
+									for (var k = 0; k < markers.length; k++) {
 										var markerIcon;
-										if (markers[k].markerElement === markerElement){
+										if (markers[k].markerElement === markerElement) {
 											currentInfoWindow = markers[k].infoWindow;
 										}
 										gMarker = markers[k].markerElement.gmarker;
-										if (gMarker.isActive && markers[k].markerElement !== markerElement){
+										if (gMarker.isActive && markers[k].markerElement !== markerElement) {
 											gMarker.isActive = false;
 											markerIcon = markers[k].markerElement.getAttribute("data-icon") || mapElement.getAttribute("data-icon")
 											gMarker.setIcon(markerIcon);
@@ -595,13 +595,13 @@
 
 									currentMarker.isActive = !currentMarker.isActive;
 									if (currentMarker.isActive) {
-										if (markerIcon = markerElement.getAttribute("data-icon-active") || mapElement.getAttribute("data-icon-active")){
+										if (markerIcon = markerElement.getAttribute("data-icon-active") || mapElement.getAttribute("data-icon-active")) {
 											currentMarker.setIcon(markerIcon);
 										}
 
 										currentInfoWindow.open(map, marker);
-									}else{
-										if (markerIcon = markerElement.getAttribute("data-icon") || mapElement.getAttribute("data-icon")){
+									} else {
+										if (markerIcon = markerElement.getAttribute("data-icon") || mapElement.getAttribute("data-icon")) {
 											currentMarker.setIcon(markerIcon);
 										}
 										currentInfoWindow.close();
@@ -615,8 +615,8 @@
 		}
 
 		// Google maps
-		if( plugins.maps.length ) {
-			lazyInit( plugins.maps, initMaps );
+		if (plugins.maps.length) {
+			lazyInit(plugins.maps, initMaps);
 		}
 
 		// Additional class on html if mac os.
@@ -870,8 +870,8 @@
 					var inputs = $this[0].getElementsByTagName('input');
 					for (var i = 0; i < inputs.length; i++) {
 						inputs[i].value = '';
-						var label = document.querySelector( '[for="'+ inputs[i].getAttribute( 'id' ) +'"]' );
-						if( label ) label.classList.remove( 'focus', 'not-empty' );
+						var label = document.querySelector('[for="' + inputs[i].getAttribute('id') + '"]');
+						if (label) label.classList.remove('focus', 'not-empty');
 					}
 
 					return false;
@@ -928,7 +928,7 @@
 								$.ajax({
 									method: "POST",
 									url: "bat/reCaptcha.php",
-									data: {'g-recaptcha-response': captchaToken},
+									data: { 'g-recaptcha-response': captchaToken },
 									async: false
 								})
 									.done(function (responceCode) {
@@ -1066,20 +1066,20 @@
 		if (plugins.progressLinear.length) {
 			for (i = 0; i < plugins.progressLinear.length; i++) {
 				var
-						init = function () {
-							var bar = $(this);
-							if (!bar.hasClass('animated-first') && isScrolledIntoView(bar)) {
-								var end = parseInt($(this).find('.progress-value').text(), 10);
-								bar.find('.progress-bar-linear').css({width: end + '%'});
-								bar.find('.progress-value').countTo({
-									refreshInterval: 40,
-									from: 0,
-									to: end,
-									speed: 500
-								});
-								bar.addClass('animated-first');
-							}
-						};
+					init = function () {
+						var bar = $(this);
+						if (!bar.hasClass('animated-first') && isScrolledIntoView(bar)) {
+							var end = parseInt($(this).find('.progress-value').text(), 10);
+							bar.find('.progress-bar-linear').css({ width: end + '%' });
+							bar.find('.progress-value').countTo({
+								refreshInterval: 40,
+								from: 0,
+								to: end,
+								speed: 500
+							});
+							bar.addClass('animated-first');
+						}
+					};
 
 				init.call($(plugins.progressLinear[i]));
 				window.addEventListener('scroll', init.bind($(plugins.progressLinear[i])));
@@ -1096,7 +1096,7 @@
 			// Format object with audio
 			for (var i = 0; i < playlistHtml.length; i++) {
 				var playlistItem = playlistHtml[i],
-						itemData = $(playlistItem).data();
+					itemData = $(playlistItem).data();
 				playlistObj[i] = {};
 
 				for (var key in itemData) {
@@ -1119,7 +1119,7 @@
 				playlistOptions: {
 					enableRemoveControls: false
 				},
-				controls:[
+				controls: [
 					'progress'
 				]
 				,
@@ -1140,16 +1140,16 @@
 				$(item).addClass('jp-audio-' + index);
 
 				var mediaObj = jpFormatePlaylistObj($(item).find('.jp-player-list .jp-player-list-item')),
-						playerInstance = initJplayerBase(index, item, mediaObj);
+					playerInstance = initJplayerBase(index, item, mediaObj);
 
 				if ($(item).data('jp-player-name')) {
 					var customJpPlaylists = $('[data-jp-playlist-relative-to="' + $(item).data('jp-player-name') + '"]'),
-							playlistItems = customJpPlaylists.find("[data-jp-playlist-item]");
+						playlistItems = customJpPlaylists.find("[data-jp-playlist-item]");
 
 					// Toggle audio play on custom playlist play button click
 					playlistItems.on('click', customJpPlaylists.data('jp-playlist-play-on'), function (e) {
 						var mediaObj = jpFormatePlaylistObj(playlistItems),
-								$clickedItem = $(e.delegateTarget);
+							$clickedItem = $(e.delegateTarget);
 
 						if (!JSON.stringify(playerInstance.playlist) === JSON.stringify(mediaObj) || !playerInstance.playlist.length) {
 							playerInstance.setPlaylist(mediaObj);
@@ -1183,10 +1183,10 @@
 							if (activeIndex !== -1) {
 								if (playlistItems.eq(activeIndex + index).length !== 0) {
 									playlistItems.eq(activeIndex)
-											.removeClass('play-next play-prev playing last-played')
-											.end()
-											.eq(activeIndex + index)
-											.addClass('playing');
+										.removeClass('play-next play-prev playing last-played')
+										.end()
+										.eq(activeIndex + index)
+										.addClass('playing');
 								}
 							}
 						};
@@ -1213,15 +1213,15 @@
 
 					// Add temp marker that user want to play next audio
 					$(item).find('.jp-next')
-							.on('click', function (e) {
-								playlistItems.filter('.playing, .last-played').addClass('play-next');
-							});
+						.on('click', function (e) {
+							playlistItems.filter('.playing, .last-played').addClass('play-next');
+						});
 
 					// Add temp marker that user want to play prev audio
 					$(item).find('.jp-previous')
-							.on('click', function (e) {
-								playlistItems.filter('.playing, .last-played').addClass('play-prev');
-							});
+						.on('click', function (e) {
+							playlistItems.filter('.playing, .last-played').addClass('play-prev');
+						});
 				}
 			});
 
@@ -1243,15 +1243,15 @@
 				$(item).find('.cp-container').addClass('cp-container-' + index);
 
 				new CirclePlayer(".cp-jplayer-" + index,
-						{
-							oga: $(item).data('jp-oga'),
-							m4a: $(item).data('jp-m4a'),
-							mp3: $(item).data('jp-mp3')
-						}, {
-							cssSelectorAncestor: ".cp-container-" + index,
-							supplied: "mp3, m4a",
-							volume: 0.4
-						});
+					{
+						oga: $(item).data('jp-oga'),
+						m4a: $(item).data('jp-m4a'),
+						mp3: $(item).data('jp-mp3')
+					}, {
+					cssSelectorAncestor: ".cp-container-" + index,
+					supplied: "mp3, m4a",
+					volume: 0.4
+				});
 			});
 		}
 
@@ -1307,11 +1307,11 @@
 				$('.jp-video').each(function (index) {
 					// find every instance of jplayer using a class in their default markup
 					var $parentContainer = $(this).closest('.jp-video-init'),
-							// finds jplayers closest parent element from the ones you give it (can chain as many as you want)
-							containerWidth = $parentContainer.width(),
-							//takes the closest elements width
-							ARWidth = 1280,
-							ARHeight = 720;
+						// finds jplayers closest parent element from the ones you give it (can chain as many as you want)
+						containerWidth = $parentContainer.width(),
+						//takes the closest elements width
+						ARWidth = 1280,
+						ARHeight = 720;
 
 					// Width and height figures used to calculate the aspect ratio (will not restrict your players to this size)
 
@@ -1323,7 +1323,7 @@
 					// and then apply the width and height!
 				});
 			})
-					.trigger('resize');
+				.trigger('resize');
 		}
 	});
 

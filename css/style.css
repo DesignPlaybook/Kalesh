@@ -7,6 +7,11 @@
 *
 * Contexts
 */
+
+.font {
+	font-weight: 490;
+}
+
 a:focus,
 button:focus {
 	outline: none !important;
