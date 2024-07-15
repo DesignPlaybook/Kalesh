@@ -25,21 +25,19 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: #ffffff;
-      /* Change this to your preferred background color */
+      background: url('images/splash-background.jpg') no-repeat center center;
+      background-size: cover;
       display: flex;
       justify-content: center;
       align-items: center;
       z-index: 9999;
-      /* Ensure the splash screen is on top of everything */
+      background-color: #ffffff;
     }
 
-    /* Style the image inside the splash screen */
     .splash-screen img {
       max-width: 300px;
       max-height: 300px;
       animation: splashAnimation 3s ease-out;
-      /* Apply animation */
       transform-origin: center;
     }
 
@@ -47,12 +45,10 @@
     @keyframes splashAnimation {
       0% {
         transform: scale(0.1);
-        /* Start from small size */
       }
 
       100% {
         transform: scale(1);
-        /* End at full size */
       }
     }
 
@@ -155,57 +151,6 @@
           </div>
         </div>
       </section>
-      <!--Player-->
-      <!-- <section class="section section-xs bg-primary-gradient wave-pattern">
-        <div class="container">
-          <div class="shell">
-            <div class="range range-xs-center">
-              <div class="col-lg-12">
-                <div class="jp-player-init">
-                  <div class="jp-jplayer"></div>
-                  <div class="jp-audio jp-audio-7" role="application" aria-label="media player">
-                    <ul class="jp-player-list">
-                      <li class="jp-player-list-item" data-jp-title="The Stark Palace - " data-jp-artist="CroMagnon Man"
-                        data-jp-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
-                    </ul>
-                    <div class="jp-interface">
-                      <div class="jp-button jp-playpaus-button">
-                        <button class="jp-btn jp-play" role="button" tabindex="7">play</button>
-                      </div>
-                      <div class="jp-time-rail">
-                        <div class="jp-progress">
-                          <div class="jp-seek-bar">
-                            <div class="jp-play-bar"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="jp-button jp-volume-button">
-                        <button class="jp-btn jp-mute" role="button" tabindex="7">max volume</button>
-                      </div>
-                      <div class="jp-volume-bar">
-                        <div class="jp-volume-bar-value"></div>
-                      </div>
-                    </div>
-                    <div class="jp-playlist">
-                      <div class="playlist-in">
-                        <ul>
-                          <li> </li>
-                        </ul>
-                        <div class="jp-current-time"></div>
-                        <div class="jp-no-solution"><span>Update Required</span> To play the media you will need to
-                          either
-                          update your browser to a recent version or update your<a
-                            href="http://get.adobe.com/flashplayer/" target="_blank"> Flash plugin</a>.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <!-- Variety of Music Genres-->
 
       <!--	Schedule of Radio Shows-->
       <section class="section section-lg bg-gray-100">
@@ -234,8 +179,7 @@
                   </ul> -->
                   <h6 class="post-title"><a href="#">RIJ Engineering Pvt. Ltd. Chakan</a></h6>
                   <p class="post-exeption">a) 33KV/433V, 315 KVA Transformer sub-station with allied
-                    electrical
-                    work<br />
+                    electrical work<br />
                     b) Industrial cabling with Tray Work & Fabrication<br />
                     c) Supply & Installation of MCC & PCC Panels<br />
                     d) Internal Lighting & Cabling<br />
@@ -322,24 +266,7 @@
           </div>
         </div>
       </section>
-      <!-- Call to action-->
-      <!-- <section class="section section-xs bg-primary-gradient">
-        <div class="container">
-          <div class="box-cta">
-            <div class="box-cta-inner">
-              <h3>Listen to OnWave From Anywhere!</h3>
-            </div>
-            <div class="box-cta-inner"><a class="button button-md button-white" href="#">Listen Online</a></div>
-          </div>
-        </div>
-      </section> -->
-      <!-- Pricing-->
-      <!-- <section class="section section-lg hide">
-        <div class="container text-center">
-          <h2>Cities and Frequencies</h2>
-          <div class="row no-gutters justify-content-center bg-img-2"></div>
-        </div>
-      </section> -->
+
       <!-- whatsapp -->
       <div class="whatsapp">
         <!-- WhatsApp icon -->
@@ -450,12 +377,13 @@
   </div>
 
   <script>
-    // After the animation completes, hide the splash screen and show the main content
-    document.querySelector('.splash-screen img').addEventListener('animationend', function () {
-      // Hide the splash screen
-      document.querySelector('.splash-screen').style.display = 'none';
-      // Show the main content
-      document.getElementById('main-content').style.display = 'block';
+    // Wait for the document to be fully loaded
+    document.addEventListener("DOMContentLoaded", function () {
+      // Fade out the splash screen after 3 seconds
+      setTimeout(function () {
+        document.querySelector(".splash-screen").style.display = "none";
+        document.getElementById("main-content").style.display = "block";
+      }, 3000);
     });
   </script>
 
